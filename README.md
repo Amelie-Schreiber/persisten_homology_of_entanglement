@@ -7,7 +7,7 @@ This bifiltration can be used to compute the 2-parameter persistent homology of 
 
 The 2-parameter persistent homology of the weighted interaction graph can be used to study the evolution of the entanglement structure of the quantum circuit. This can provide insights into the quantum information processing that is happening in the circuit, and can help us understand the role of entanglement in quantum computation. This can again be utilized in understanding and improving the transpiling process, especially when hardware backend constraints are topological in nature. 
 
-Overall, computing the 2-parameter persistent homology of a bifiltration constructed from a quantum circuit can be a useful tool for studying the entanglement structure of the circuit and gaining insights into the quantum information processing that is happening. We can then use [Rivet](https://github.com/rivetTDA/rivet)
+Overall, computing the 2-parameter persistent homology of a bifiltration constructed from a quantum circuit can be a useful tool for studying the entanglement structure of the circuit and gaining insights into the quantum information processing that is happening. We can then use [Rivet](https://github.com/rivetTDA/rivet). It would also be a very interesting problem both mathematically and physically to see a complete study of how these interaction graphs change based on the chosen basis gate set. 
 
 Given a distance matrix (or weighted adjacency matrix used to give distance in some way eg. inverse mutual information) we can compute one-parameter persistent homology by using the following Gudhi code:
 
