@@ -9,7 +9,8 @@ The 2-parameter persistent homology of the weighted interaction graph can be use
 
 Overall, computing the 2-parameter persistent homology of a bifiltration constructed from a quantum circuit can be a useful tool for studying the entanglement structure of the circuit and gaining insights into the quantum information processing that is happening. We can then use [Rivet](https://github.com/rivetTDA/rivet). It would also be a very interesting problem both mathematically and physically to see a complete study of how these interaction graphs change based on the chosen basis gate set. 
 
-Given a distance matrix (or weighted adjacency matrix used to give distance in some way eg. inverse mutual information) we can compute one-parameter persistent homology by using the following Gudhi code:
+Start by defining a quantum circuit. The ineraction graphs weighted by two-qubit gate count, von Neumann entanglement entropy, or quantum mutual inforamtion can then be obtained by using the appropriate notebook. Once the weighted interaction graph is obtained we use its weighted adjacency matrix to obtain a distance matrix. For example, we could define the distance matrix using inverse quantum mutual information as "distance", i.e. the filtration parameter for persistent homology. Given a distance matrix (or weighted adjacency matrix, we can compute one-parameter persistent homology by using the following Gudhi code:
+
 
 ```
 import numpy as np
@@ -35,3 +36,7 @@ plt.show()
 gudhi.plot_persistence_barcode(diag)
 plt.show()
 ```
+
+This can then be used as a topological feature for learning to classify quantum circuits via their interaction graph. The classification can be performed with respect to ASIC or hardware backend requirements. 
+
+Could we for example, we might want interaction graphs that can be embedded into surfaces of a particular genus to be used with a particular surface code? Might we also study probabilistic graph grammars with this, and classify interaction graphs with particular grammatical structure?
