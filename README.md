@@ -3,7 +3,7 @@ The main notebook to look at in this repo is [persistent_homology_of_entanglemen
 
 Dividing the quantum circuit into time-steps and computing the reduced density matrix operator for each time step allows us to construct a weighted interaction graph, where the weights are given by the (1) The inverse quantum mutual information, (2) von Neumann entanglement entropy, or (3) the two-qubit gate count, between each pair of qubits. By considering the  quantum mutual information as a parameter (technically its additive inverse: 
 $$d(\rho_i, \rho_j) = 2\ln(2)-M(\rho_i, \rho_j) = 2\ln(2) - (S(\rho_i) + S(\rho_j) - S(\rho_{ij}))$$
-where $S(\rho)$ is the von Neumann entanglement entropy for the density matrix $\rho$), we obtain a bifiltration of the weighted interaction graph.
+where $S(\rho)$ is the von Neumann entanglement entropy for the density matrix $\rho$), we obtain a bifiltration of the weighted interaction graph, where discrete time is the second parameter.
 
 This bifiltration can be used to compute the 2-parameter persistent homology of the weighted interaction graph. The first parameter is time, and the second parameter is the inverse quantum mutual information. The persistent homology captures the topological features of the interaction graph that persist across different time-steps and inverse QMI values.
 
